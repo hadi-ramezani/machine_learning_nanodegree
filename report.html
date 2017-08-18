@@ -1705,7 +1705,7 @@ Think about the pros and cons of adding more training points based on if the tra
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
 <p>max_depth = 3</p>
-<p>As more training points are added, the score of the training curve converges to a score of ~0.8. The testing score also converges to the same value of ~0.8.</p>
+<p>In the beginning where we have a small number of training points, adding more training points reduces the training score and improves the testing score. The training and testing scores then start to converge to their optimal values. As more training points are added, the score of the training curve converges to a score of ~0.8. The testing score also converges to the same value of ~0.8.</p>
 <p>Having more training points beyond 300 points wouldn't add much benefit to the model becuase the training and the testing scores already converged to a constant value. Including more training point would also slow down construction of our model.</p>
 
 </div>
@@ -2255,7 +2255,7 @@ Cc8YY0y9YAnPGGNMvWAJzxhjTL1gCc8YY0y9YAnPGGNMvfD/aA2QkAydESAAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>Most of the machine learning algorithms have a number of parameters (called hyperparameters) to tell the algorithm how to make decisions (e.g. when to stop branching the data) or select boundaries. These parameters needs to be tuned to get the best performance. Our algorithm can perform poorly, run slowly, or it could be prone to overfitting if we don’t do this correctly. Grid serach is a technique to optimize these hyperparameters in order to optimize the performance of an algorithm. In this technique, we first select the hyperparameters that we want to optmize. For exapmple, in a decision tree classifier, two hyperparameters for tuning could be 'min_samples_split', and 'max_features'. We then need to select some reasonable values for each parameter. For example: {'min_samples_split': [2, 5], 'max_features': [4, 10]}</p>
+<p>Most of the machine learning algorithms have a number of parameters (called hyperparameters) to tell the algorithm how to make decisions (e.g. when to stop branching the data) or select boundaries. These parameters needs to be tuned to get the best performance. Our algorithm can perform poorly, run slowly, or it could be prone to overfitting if we don’t do this correctly. Grid serach is an exhaustive search to tune these hyperparameters in order to optimize the performance of an algorithm. In this technique, we first select the hyperparameters that we want to optmize. For exapmple, in a decision tree classifier, two hyperparameters for tuning could be 'min_samples_split', and 'max_features'. We then need to select some reasonable values for each parameter. For example: {'min_samples_split': [2, 5], 'max_features': [4, 10]}</p>
 <p>The grid search then creates a grid using these parameters: (min_split=2, max_feat = 4), (min_split=2, max_feat = 10), (min_split=5, max_feat = 4), (min_split=5, max_feat = 10). This is where the name "grid" comes from. The grid search then evaluates the performance of the model using these parameters and provide the set of parameters that gives the best performance.</p>
 
 </div>
@@ -2284,7 +2284,7 @@ Cc8YY0y9YAnPGGNMvWAJzxhjTL1gCc8YY0y9YAnPGGNMvfD/aA2QkAydESAAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>One of the problems with splitting available data into the train and test subsets is that we lose some of the data for training. The k-fold cross-validation technique resolves this problem. This method splits the dataset into "k" equally-sized subsets. It then trains the model using the k-1 subsets and test it on the remaining subset. This procedure is repeated k times. Each time a subset that wasn't used before is used for testing and the rest of the data is used for training. The average score is then reported.</p>
+<p>One of the problems with splitting the training dataset into the validation and train subsets is that we lose some of our training data when we train our model. The k-fold cross-validation technique resolves this problem. This method splits the training dataset into "k" equally-sized subsets. It then trains the model using the k-1 subsets and validate it on the remaining subset. This procedure is repeated k times. Each time a subset that wasn't used before is used for testing and the rest of the data is used for training. The average score is then reported.</p>
 <p>If we evaluate our grid search using fixed test data, we may overfit our hyperparameters on our test set. This is dangerous! To avoid this we can use k-fold cross-validation in our grid search to make sure the hyperparameters are not overfitted. This would make the grid search more expensive because the evaluation must happen k times on each grid point but the outcome will be much better.</p>
 
 </div>
