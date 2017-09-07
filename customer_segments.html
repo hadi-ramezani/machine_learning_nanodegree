@@ -208,7 +208,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[498]:</div>
+<div class="prompt input_prompt">In&nbsp;[537]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Import libraries necessary for this project</span>
@@ -249,7 +249,7 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[498]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[537]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -348,7 +348,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[499]:</div>
+<div class="prompt input_prompt">In&nbsp;[538]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Display a description of the dataset</span>
@@ -488,7 +488,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[500]:</div>
+<div class="prompt input_prompt">In&nbsp;[539]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -600,9 +600,9 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>The first sample (index = 22) has bought a significat (above average) amount of "Fresh", "Frozen", and "Delicatessen" which are all related to food. This could be a restaurant or cafe. That customer spent below average on "Milk", "Grocery" and "Detergents_Paper" which shows it's probably not a retailer</p>
-<p>The second sample (index = 86) has purchased a lot of "Fresh", "Milk", "Grocery", and "Detergents_Paper" with values well above the average values. I think this customer could be a large dairy store or fresh food market specifically considering the amount of annual purchase for "Fresh" and "Milk".</p>
-<p>The third sample (index = 100) show above-average values for all items other than "Fresh". The annual purchase between different items appears to be relatively balanced, i.e. they needed to have all items available in their store. This could be a typical retailer/grocery store.</p>
+<p>The first sample (index = 22) has bought a significat (above meadian, mean, and 75 percentile) amount of "Fresh", "Frozen", and "Delicatessen" which are all related to food. This could be a restaurant or cafe. That customer spent below average on "Milk", "Grocery" and "Detergents_Paper" which shows it's probably not a retailer</p>
+<p>The second sample (index = 86) has purchased a lot of "Fresh", "Milk", "Grocery", and "Detergents_Paper" with values well above the average, median, and 75 percentile values. I think this customer could be a large dairy store or fresh food market specifically considering the amount of annual purchase for "Fresh" and "Milk".</p>
+<p>The third sample (index = 100) show above-average/median for all items other than "Fresh". The annual purchase between different items appears to be relatively balanced, i.e. they needed to have all items available in their store. This could be a typical retailer/grocery store.</p>
 
 </div>
 </div>
@@ -629,7 +629,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[501]:</div>
+<div class="prompt input_prompt">In&nbsp;[540]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># TODO: Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
@@ -707,7 +707,7 @@ I tried to predict "Fresh" using other features. The coefficient of determinatio
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[502]:</div>
+<div class="prompt input_prompt">In&nbsp;[541]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Produce a scatter matrix for each pair of features in the data</span>
@@ -2375,7 +2375,7 @@ Yes, I see that "Milk" and "Detergents_Paper", "Milk" and "Grocery", as welll as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[503]:</div>
+<div class="prompt input_prompt">In&nbsp;[542]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># TODO: Scale the data using the natural logarithm</span>
@@ -5354,7 +5354,7 @@ WgAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[504]:</div>
+<div class="prompt input_prompt">In&nbsp;[543]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Display the log-transformed sample data</span>
@@ -5458,7 +5458,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[505]:</div>
+<div class="prompt input_prompt">In&nbsp;[544]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># For each feature find the data points with extreme high or low values</span>
@@ -6230,7 +6230,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>Yes, according to my calculations data points with indices 65, 66, 75, 128, and 154 have been considered outliers for more than one feature. I think we should remove those data points from the calculations because an error had probably occured during the data entry process that led to some odd numbers. These are the data that I decided to add to the <code>outliers</code> list. I should mention that I did the calculations twice; with and without outliers, and I eventually decided to remove the outliers.</p>
+<p>Yes, according to my calculations data points with indices 65, 66, 75, 128, and 154 have been considered outliers for more than one feature. I think we should remove those data points from the calculations because an error had probably occured during the data entry process that led to some odd numbers. These are the data that I decided to add to the <code>outliers</code> list. I should mention that I did the calculations twice; with and without outliers. It turns out that if I leave these five outliers in, the optimized number of clusters will be 3 (instead of 2) according to silhouette score. This is different from the actual distribution of the data. Therefore, I decided to remove the outliers.</p>
 
 </div>
 </div>
@@ -6262,7 +6262,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[506]:</div>
+<div class="prompt input_prompt">In&nbsp;[545]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># TODO: Apply PCA by fitting the good data with the same number of dimensions as features</span>
@@ -6276,6 +6276,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 
 <span class="c"># Generate PCA results plot</span>
 <span class="n">pca_results</span> <span class="o">=</span> <span class="n">vs</span><span class="o">.</span><span class="n">pca_results</span><span class="p">(</span><span class="n">good_data</span><span class="p">,</span> <span class="n">pca</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">pca_results</span><span class="p">[</span><span class="s">&#39;Explained Variance&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -6285,6 +6286,19 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="output_wrapper">
 <div class="output">
 
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Dimension 1    0.4430
+Dimension 2    0.7068
+Dimension 3    0.8299
+Dimension 4    0.9311
+Dimension 5    0.9796
+Dimension 6    1.0000
+Name: Explained Variance, dtype: float64
+</pre>
+</div>
+</div>
 
 <div class="output_area"><div class="prompt"></div>
 
@@ -6659,8 +6673,8 @@ RU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>44.3% variance in the data is explained by the first principal component, and 26.38% variance in the data is explained by the second principal component. 93.11% variance in the data is explained using the first four principal components. 
-From the plot of feature weights for dimension 1, we can see that "Detergents_Paper", "Grocery", "Milk" have the largest weights. This shows that 1) these three are correlated (as we saw before using the correlation matrix), and 2) these three define the direction of the maximum variance. The direction of the maximum variance is a direction  that the data changes a lot in that direction. Since the sign of the main feature weights are negative, the first dimension represent customers that buy below average "Detergents_Paper", "Grocery", and "Milk". Using similar arguments, dimension 2 represents customer that buy below average "Fresh", "Frozen", and "Delicatessen", dimension 3 represents customers who buy well below average  "Fresh", and a lot of "Delicatessen" and "Frozen", and dimension 4 represents customer who spend a lot on "Frozen" and very little on "Delicatessen".</p>
+<p>44.3% variance in the data is explained by the first principal component, and 26.38% variance in the data is explained by the second principal component. 70.68% variance in the data in explained by the first two principal components. 93.11% variance in the data is explained using the first four principal components.</p>
+<p>From the plot of feature weights for dimension 1, we can see that "Detergents_Paper", "Grocery", "Milk" have the largest weights. This shows that 1) these three are correlated (as we saw before using the correlation matrix), and 2) these three define the direction of the maximum variance. The direction of the maximum variance is a direction  that the data changes a lot in that direction. The large feature wights for "Detergents_Paper", "Grocery", and "Milk" in the first dimension shows that this dimension separates retailer/grocery stores from other segments. Using similar arguments, relatively high weights of "Fresh", "Frozen", and "Delicatessen" in dimension 2 shows that this dimension likely separates restaurants/hotels from other customers. Dimension 3 and 4 are probably  a combination of the first two segments. Dimension 3 represents customers who buy well below average  "Fresh", and a lot of "Delicatessen" and "Frozen", and dimension 4 represents customer who spend a lot on "Frozen" and very little on "Delicatessen".</p>
 
 </div>
 </div>
@@ -6677,7 +6691,7 @@ From the plot of feature weights for dimension 1, we can see that "Detergents_Pa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[507]:</div>
+<div class="prompt input_prompt">In&nbsp;[546]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Display sample log-data after having a PCA transformation applied</span>
@@ -6778,7 +6792,7 @@ From the plot of feature weights for dimension 1, we can see that "Detergents_Pa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[508]:</div>
+<div class="prompt input_prompt">In&nbsp;[547]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># TODO: Apply PCA by fitting the good data with only two dimensions</span>
@@ -6811,7 +6825,7 @@ From the plot of feature weights for dimension 1, we can see that "Detergents_Pa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[509]:</div>
+<div class="prompt input_prompt">In&nbsp;[548]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Display sample log-data after applying PCA transformation in two dimensions</span>
@@ -6891,7 +6905,7 @@ From the plot of feature weights for dimension 1, we can see that "Detergents_Pa
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[510]:</div>
+<div class="prompt input_prompt">In&nbsp;[549]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Create a biplot</span>
@@ -6906,11 +6920,11 @@ From the plot of feature weights for dimension 1, we can see that "Detergents_Pa
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[510]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[549]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f2deb719a50&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f2df547b650&gt;</pre>
 </div>
 
 </div>
@@ -7984,7 +7998,7 @@ IiIiN8fAjYiIiIiIyM39P2bsom8xI0onAAAAAElFTkSuQmCC
 <li>A single data will belong to more than one cluster (more flexible that K-means).</li>
 <li>Might work better for elongated clusters.</li>
 </ul>
-<p>I think we can use both clustering algorithms in this problem because the distribution of the data look pretty normal after log-transformation. However, the distributions still deviate from gaussian. Since, K-means is simpler, and the distribution of the data is not highly elongated, I decided to use K-means clustering here.</p>
+<p>I think we can use both clustering algorithms in this problem because the distribution of the data look pretty normal after log-transformation. Since, K-means is simpler and faster, I first checked the results using K-means but in the end I decided to go with GMM since the our data set is pretty small here and the cluster could have some overlaps in which GMM can actually assign a data point to more than one cluster.</p>
 <p>References:</p>
 <ul>
 <li><a href="http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html">http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html</a></li>
@@ -8018,7 +8032,7 @@ IiIiN8fAjYiIiIiIyM39P2bsom8xI0onAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[511]:</div>
+<div class="prompt input_prompt">In&nbsp;[555]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># TODO: Apply your clustering algorithm of choice to the reduced data </span>
@@ -8110,7 +8124,7 @@ Silhouette score is 0.300456388725 for 5 clusters
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[512]:</div>
+<div class="prompt input_prompt">In&nbsp;[551]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Display the results of the clustering from implementation</span>
@@ -8909,7 +8923,7 @@ VmLmkQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[513]:</div>
+<div class="prompt input_prompt">In&nbsp;[552]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># TODO: Inverse transform the centers</span>
@@ -9009,8 +9023,8 @@ VmLmkQAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>We see that in Segment 0, the values of "Detergents_Paper", "Milk", and "Grocery" are well below average. It shows that these customers are establishments that those items are not critical to them; the establishments such as restaturants, and hotels. 
-For Segment 1, the values of "Fresh", "Frozen" and "Delicatessen" are well below average. This shows that these establishments are not hotels, restaurants, etc because foods are not the only critical items for them. They could be grocery shops, retail stores, etc.</p>
+<p>We see that in Segment 0, the values of "Detergents_Paper", "Milk", and "Grocery" are well below average and the values of "Milk", and "Grocery" are below median. It shows that these customers are establishments that those items are not critical to them; the establishments such as restaturants, and hotels. 
+For Segment 1, the values of "Fresh", "Frozen" and "Delicatessen" are well below average/median. This shows that these establishments are not hotels, restaurants, etc because foods are not the only critical items for them. They could be grocery shops, retail stores, etc.</p>
 
 </div>
 </div>
@@ -9028,7 +9042,7 @@ For Segment 1, the values of "Fresh", "Frozen" and "Delicatessen" are well below
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[514]:</div>
+<div class="prompt input_prompt">In&nbsp;[553]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Display the predictions</span>
@@ -9145,7 +9159,7 @@ Sample point 2 predicted to be in Cluster 1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[515]:</div>
+<div class="prompt input_prompt">In&nbsp;[554]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Display the clustering results based on &#39;Channel&#39; data</span>
