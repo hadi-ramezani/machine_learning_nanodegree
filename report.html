@@ -2848,7 +2848,7 @@ $$ \epsilon = a^t, \textrm{for } 0 < a < 1 \hspace{50px}\epsilon = \frac{1}{t^2}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Load the &#39;sim_improved-learning&#39; file from the improved Q-Learning simulation</span>
@@ -4698,8 +4698,8 @@ $$ \epsilon = e^{-at}, \textrm{with } a = 0.01 $$<ul>
 <p>(forward, green, any, any, forward)</p>
 <p>(forward, red, any, any, None)</p>
 <p>(left, red, any, any, None)</p>
-<p>(left, green, forward, any, None)</p>
-<p>(left, green, None/right/left, any, left)</p>
+<p>(left, green, forward/right, any, None)</p>
+<p>(left, green, None/left, any, left)</p>
 <p>(right, green, any, any, right)</p>
 <p>(right, red, any, forward, None)</p>
 <p>(right, red, any, right/left/None, right)</p>
@@ -4714,10 +4714,10 @@ $$ \epsilon = e^{-at}, \textrm{with } a = 0.01 $$<ul>
  does not intend to move "forward".</p>
 <p>('left', 'green', None, 'right') -- forward : 1.23 -- left : 1.90 -- right : 0.35 -- None : -4.20
  when the light is "green" and the driver wants to turn "left", it is lawful to do so if the oncoming traffic does
- not intend to move "forward".</p>
+ not intend to move "forward" or "right".</p>
 <p>('left', 'green', 'left', 'forward') -- forward : 0.48 -- left : 1.77 -- right : 0.97 -- None : -4.33
  when the light is "green" and the driver wants to turn "left", it is lawful to do so if the oncoming traffic does
- not intend to move "forward".</p>
+ not intend to move "forward" or "right".</p>
 <p>These are all optimal policies because choosing them causes no traffic violations and improves reliability.</p>
 </li>
 <li><p>('right', 'green', 'forward', 'left')  -- forward : 0.00  -- left : 1.27  -- right : 0.00  -- None : -2.92
