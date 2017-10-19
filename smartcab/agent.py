@@ -48,10 +48,11 @@ class LearningAgent(Agent):
             self.epsilon = 0
             self.alpha = 0
         else:
-            self.epsilon = self.epsilon - 0.05
-            #self.epsilon = math.exp(-0.01*self.trial_num)
+            # Linear decaying function for epsilon
+            #self.epsilon = self.epsilon - 0.05
+            # Optimum decaying function for epsilon
+            self.epsilon = math.exp(-0.01*self.trial_num)
             self.trial_num +=1
-
 
         return None
 
@@ -76,7 +77,6 @@ class LearningAgent(Agent):
         
         # Set 'state' as a tuple of relevant data for the agent        
         state = (waypoint, inputs['light'], inputs['oncoming'], inputs['left'])
-
 
         return state
 
@@ -132,17 +132,16 @@ class LearningAgent(Agent):
             if probability <= self.epsilon:
                 action = random.choice(self.valid_actions)
             else:
-                #max(stats.iteritems(), key=operator.itemgetter(1))[0]
                 maxQ = self.get_maxQ(state)
                 best_action = []
                 for action in self.Q[state]:
                     if self.Q[state][action] >= maxQ:
                         best_action.append(action)
                 # handle ties
-                if len(best_action) > 1:
-                    action = random.choice(best_action)
-                elif len(best_action) == 1:
+                if len(best_action) == 1:
                     action = best_action[0]
+                else:
+                    action = random.choice(best_action)
         else:
             action = random.choice(self.valid_actions)
 
@@ -210,7 +209,7 @@ def run():
     #   display      - set to False to disable the GUI if PyGame is enabled
     #   log_metrics  - set to True to log trial and simulation results to /logs
     #   optimized    - set to True to change the default log file name
-    sim = Simulator(env, update_delay = 0.001, log_metrics=True, display=False, optimized=False)
+    sim = Simulator(env, update_delay = 0.001, log_metrics=True, display=False, optimized=True)
     
     ##############
     # Run the simulator
